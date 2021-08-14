@@ -8,8 +8,7 @@
 		"start:prod": "node sever.js",
 		"start:dev": "concurrently \"nodemon server.js --ignore client\" \"npm run client\"",
 		"client": "npm start --prefix client",
-		"build": "cd client && npm run build",
-		"heroku-postbuild": "npm run build"
+		"build": "cd client && npm run build"
 	},
 	"keywords": [],
 	"author": "",
