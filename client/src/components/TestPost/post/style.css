@@ -1,0 +1,21 @@
+.error {
+    border: red solid 3px;
+    border-radius: 25px;
+    background-color: rgb(25, 80, 80);
+    color: white;
+    padding: 10px;
+    margin: 10px  40% 10px 40%;
+    width: 20%;
+    text-align: center;
+}
+
+.success {
+    border: green solid 3px;
+    border-radius: 25px;
+    background-color: rgb(64, 151, 64);
+    color: white;
+    padding: 10px;
+    margin: 10px 40% 10px 40%;
+    width: 20%;
+    text-align: center;
+}

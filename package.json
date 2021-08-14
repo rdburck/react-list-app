@@ -1,0 +1,28 @@
+{
+	"name": "express",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+		"start:prod": "node sever.js",
+		"start:dev": "concurrently \"nodemon server.js --ignore client\" \"npm run client\"",
+		"client": "npm start --prefix client",
+		"build": "cd client && npm run build",
+		"heroku-postbuild": "npm run build"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.21.1",
+		"concurrently": "^6.2.0",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"if-env": "^1.0.4",
+		"mongoose": "^5.13.5"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.12"
+	}
+}
