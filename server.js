@@ -20,11 +20,11 @@ const PORT = process.env.PORT || 3010;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(routes);
 
 if(process.env.NODE_EV === 'production') {
 	app.use(express.static('client/build'));
 }
+app.use(routes);
 
 // app.post("/api/test/data", (req, res) => {
 // 	console.log(req);
