@@ -23,6 +23,10 @@ app.use(express.urlencoded({ extended: true }));
 
 if(process.env.NODE_EV === 'production') {
 	app.use(express.static('client/build'));
+	app.get("*", (req, res) =>
+	//telling path model to join our current directory name
+	res.sendFile(path.join(__dirname, "../client/build/index.html"))
+);
 }
 app.use(routes);
 
